@@ -6,17 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://abc-5.github.io">
-  <title>categories | Hexo</title>
+  <title>XssL | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://abc-5.github.io/categories/index.html">
+  <meta name="description" content="代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XssL">
+<meta property="og:url" content="https://abc-5.github.io/2020/05/19/XssL/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="代码">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-26T08:43:00.000Z">
-<meta property="article:modified_time" content="2020-04-27T02:00:34.025Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y4czLj.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y4zUBj.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y5D18e.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y5rEi8.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y5shjJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y5yhPf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y56cSU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/19/Y56Xmd.png">
+<meta property="article:published_time" content="2020-05-19T13:10:10.000Z">
+<meta property="article:modified_time" content="2020-05-19T13:16:51.072Z">
 <meta property="article:author" content="Abc-5">
+<meta property="article:tag" content="-Xss 学习笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/19/Y4czLj.md.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,27 +166,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-XssL" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      XssL
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-04-26T08:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
+        <a href="/2020/05/19/XssL/" class="archive-article-date">
+  	<time datetime="2020-05-19T13:10:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><a id="more"></a>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">window.alert = <span class="function"><span class="keyword">function</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;     </span><br><span class="line">confirm(<span class="string">"xxxxxxxxxxx"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">$str = $_GET[<span class="string">"key"</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;div&gt;"</span>.$str.<span class="string">"&lt;/div&gt;"</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>构造xss<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(1)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输入可以弹出函数内的信息</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="xss获得cookie"><a href="#xss获得cookie" class="headerlink" title="xss获得cookie"></a>xss获得cookie</h4><p><em>使用 DVWA 环境 难度设置 LOW</em></p>
+<ol>
+<li><p>先测试能否弹窗</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y4czLj.md.png" alt="image"></p>
+</li>
+<li><p>构造代码</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(doument.cookie&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y4zUBj.md.png" alt="image"></p>
+<h4 id="xss漏洞"><a href="#xss漏洞" class="headerlink" title="xss漏洞"></a>xss漏洞</h4><h5 id="xss-分为三类"><a href="#xss-分为三类" class="headerlink" title="xss 分为三类"></a>xss 分为三类</h5><ul>
+<li><p>反射型 xss</p>
+<blockquote>
+<p>把用户输入的数据”反射”给浏览器，攻击时需要用户配合点击，也称”非持久型xss”。</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>   </span><br><span class="line">  $input = $_GET[<span class="string">"param"</span>];</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"&lt;div&gt;"</span>.$input.<span class="string">"&lt;/div&gt;"</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>正常情况</strong></p>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y5D18e.md.png" alt="image"></p>
+<p><strong>加载构造 xss</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(xss)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y5rEi8.md.png" alt="image"></p>
+</li>
+<li><p>存储型 xss</p>
+<blockquote>
+<p>把用户输入的数据”存储”在服务器端，也叫”持久型xss”，常见留言板等可以提交展示用户内容的功能点。</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt; </span><br><span class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt; </span><br><span class="line">  &lt;title&gt;留言板&lt;/title&gt; </span><br><span class="line">  &lt;/head&gt; </span><br><span class="line">  &lt;body&gt; </span><br><span class="line">  &lt;center&gt; </span><br><span class="line">  &lt;h6&gt;我的留言板&lt;/h6&gt;</span><br><span class="line">  &lt;form action=<span class="string">""</span> method=<span class="string">"get"</span>&gt; </span><br><span class="line">  &lt;h6&gt;请输入留言内容&lt;/h6&gt; </span><br><span class="line">  &lt;input type=<span class="string">"text"</span> name=<span class="string">"xss_input_value"</span> placeholder=<span class="string">"输入留言内容"</span>&gt;&lt;br&gt; </span><br><span class="line">  &lt;input type=<span class="string">"submit"</span> &gt; </span><br><span class="line">  &lt;/form&gt; </span><br><span class="line">  &lt;hr&gt; </span><br><span class="line">  &lt;h6&gt;这里假设我们是正常用户来查看留言这个界面&lt;/h6&gt;    </span><br><span class="line">  <span class="meta">&lt;?php</span> </span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'xss_input_value'</span>]))&#123;</span><br><span class="line">      $xss = $_GET[<span class="string">'xss_input_value'</span>];  </span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">isset</span>($xss))&#123;  </span><br><span class="line">      <span class="keyword">echo</span> <span class="string">'&lt;input type="text" value="'</span>.$xss.<span class="string">'"&gt;'</span>;  </span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">      <span class="keyword">echo</span> <span class="string">'&lt;input type="type" vplaceholder="输出留言内容"&gt;'</span>;  </span><br><span class="line">      &#125;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">echo</span> <span class="string">'&lt;input type="type" placeholder="输出留言内容"&gt;'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="meta">?&gt;</span> </span><br><span class="line">  &lt;/center&gt; </span><br><span class="line">  &lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>正常显示</strong><br><img src="https://s1.ax1x.com/2020/05/19/Y5shjJ.png" alt="image"></p>
+<p><strong>构造xss</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"&gt;&lt;script&gt;alert(/This is a xss test!/)&lt;/script&gt;    # ("</span>&gt;是用来闭合input标签)</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y5yhPf.png" alt="image"></p>
+</li>
+<li><p>DOM型 xss</p>
+<blockquote>
+<p>从是否存储可划分为反射型，可通过修改页面的DOM节点形成的xss漏洞。</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> str = document.getElementById(<span class="string">"text"</span>).value;</span><br><span class="line">  document.getElementById(<span class="string">"t"</span>).innerHTML = <span class="string">"&lt;a href='"</span>+str+<span class="string">"'&gt;testLink&lt;/a&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;div id=<span class="string">"t"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;input type=<span class="string">"text"</span> id=<span class="string">"text"</span> value=<span class="string">""</span> /&gt;</span><br><span class="line">&lt;input type=<span class="string">"button"</span> id=<span class="string">"s"</span> value=<span class="string">"write"</span> onclick=<span class="string">"test()"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>正常显示</strong><br><img src="https://s1.ax1x.com/2020/05/19/Y56cSU.png" alt="image"></p>
+<blockquote>
+<p>这里，”write”按钮的onclick事件调用了test()函数。而在test()函数中，修改了页面DOM节点，通过innerHTML把一段用户数据当做HTML写入页面中，这就造成了DOM based XSS.</p>
+</blockquote>
+<p><strong>构造xss</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#39; onclick&#x3D;alert(&#x2F;xss&#x2F;) &#x2F;&#x2F;     # 首先一个单引号闭合掉href的第一个单引号，然后插入一个onclick事件，最后在用注释符&quot;&#x2F;&#x2F;&quot;注释掉第二个单引号。</span><br></pre></td></tr></table></figure>
+<p>输入之后，网页代码变成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&#39;&#39; onclick&#x3D;alert(&#x2F;xss&#x2F;) &#x2F;&#x2F;&#39; &gt;testLink&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/05/19/Y56Xmd.png" alt="image"></p>
+<h5 id="xss-危害"><a href="#xss-危害" class="headerlink" title="xss 危害"></a>xss 危害</h5><ul>
+<li>cookie 劫持 (窃取cookie)</li>
+<li>后台增删改文章等操作(类似于csrf骗取用户点击，利用js模拟浏览器发包，借助xmlhttprequest类)</li>
+<li>钓鱼，利用xss构造除一个登录框，骗取账户密码。</li>
+<li>Xss蠕虫</li>
+<li>修改网页代码(利用xss漏洞传播)</li>
+<li>利用网站重定向</li>
+</ul>
+<h5 id="xss-防御"><a href="#xss-防御" class="headerlink" title="xss 防御"></a>xss 防御</h5><ol>
+<li>输入检查<blockquote>
+<p>用户名、邮箱等表单验证（前台/服务器二次验证） 副文本使用白名单机制等</p>
+</blockquote>
+</li>
+<li>输出检查<blockquote>
+<p>HTML-Encoder  js-Encoder</p>
+</blockquote>
+</li>
+<li>HTTP头部:HttpOnly<blockquote>
+<p>设置cookoie时加入HttpOnly可使js脚本无法获取cookie</p>
+</blockquote>
+</li>
+<li>HTTP头部:CSP(Content Security Policy)<blockquote>
+<p>定义允许的资源加载地址，比如图片/视频/JS脚本等</p>
+</blockquote>
+</li>
+<li>HTTPS加密访问<blockquote>
+<p>有效放置DOM XSS攻击</p>
+</blockquote>
+</li>
+<li>Bypass xss过滤<blockquote>
+<p>用户输入的数据进行了过滤</p>
+</blockquote>
+</li>
+</ol>
+
       
 
 
@@ -216,6 +323,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-Xss 学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +384,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://abc-5.github.io/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://abc-5.github.io/2020/05/19/XssL/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,6 +396,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/28/java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -296,6 +424,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -318,7 +456,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
