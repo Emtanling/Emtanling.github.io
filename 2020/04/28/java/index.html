@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://abc-5.github.io">
   <title>java | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaJDK下载地址">
+  <meta name="description" content="JavaJDK下载地址https:&#x2F;&#x2F;www.oracle.com&#x2F;java&#x2F;technologies&#x2F;javase&#x2F;javase9-archive-downloads.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java">
 <meta property="og:url" content="https://abc-5.github.io/2020/04/28/java/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JavaJDK下载地址">
+<meta property="og:description" content="JavaJDK下载地址https:&#x2F;&#x2F;www.oracle.com&#x2F;java&#x2F;technologies&#x2F;javase&#x2F;javase9-archive-downloads.html">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-29T02:32:45.000Z">
-<meta property="article:modified_time" content="2020-05-19T13:20:37.492Z">
+<meta property="article:modified_time" content="2020-05-22T05:36:02.024Z">
 <meta property="article:author" content="Abc-5">
-<meta property="article:tag" content="-java windows环境变量">
+<meta property="article:tag" content="-JDK 环境变量">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -177,26 +177,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p>JDK下载地址</p>
+        <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p>JDK下载地址<br><a href="https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html</a></p>
 <a id="more"></a>
-<p><a href="https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html</a></p>
 <p>Java development kit                java开发工具包  jdk</p>
 <p>Java Runtime Environment    java运行环境  jre</p>
 <p>Java Virtual Machine                 java虚拟机  jvm</p>
-<h1 id="jdk安装方法："><a href="#jdk安装方法：" class="headerlink" title="jdk安装方法："></a>jdk安装方法：</h1><h2 id="1-新建系统变量：JAVA-HOME"><a href="#1-新建系统变量：JAVA-HOME" class="headerlink" title="1.新建系统变量：JAVA_HOME"></a>1.新建系统变量：JAVA_HOME</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">路径取jdk路径</span><br><span class="line">E:\xxx\jdk1.8</span><br></pre></td></tr></table></figure>
-<h2 id="2-在系统变量Path后面追加"><a href="#2-在系统变量Path后面追加" class="headerlink" title="2.在系统变量Path后面追加"></a>2.在系统变量Path后面追加</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br></pre></td></tr></table></figure>
-<h2 id="3-添加classpath"><a href="#3-添加classpath" class="headerlink" title="3. 添加classpath"></a>3. 添加classpath</h2><p>CLASSPATH</p>
+<h2 id="jdk安装方法："><a href="#jdk安装方法：" class="headerlink" title="jdk安装方法："></a>jdk安装方法：</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><h4 id="1-新建系统变量：JAVA-HOME"><a href="#1-新建系统变量：JAVA-HOME" class="headerlink" title="1.新建系统变量：JAVA_HOME"></a>1.新建系统变量：JAVA_HOME</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">路径取jdk路径</span><br><span class="line">E:\xxx\jdk1.8</span><br></pre></td></tr></table></figure>
+<h4 id="2-在系统变量Path后面追加"><a href="#2-在系统变量Path后面追加" class="headerlink" title="2.在系统变量Path后面追加"></a>2.在系统变量Path后面追加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br></pre></td></tr></table></figure>
+<h4 id="3-添加classpath"><a href="#3-添加classpath" class="headerlink" title="3. 添加classpath"></a>3. 添加classpath</h4><p>CLASSPATH</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</span><br></pre></td></tr></table></figure>
-<h2 id="4-验证"><a href="#4-验证" class="headerlink" title="4. 验证"></a><strong>4. 验证</strong></h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\mi&gt; javac -version</span><br><span class="line">javac 1.8.0_201</span><br></pre></td></tr></table></figure>
-<h2 id="5-IDE"><a href="#5-IDE" class="headerlink" title="5.IDE"></a>5.IDE</h2><p>Eclipse IDE</p>
+<h4 id="4-验证"><a href="#4-验证" class="headerlink" title="4. 验证"></a>4. 验证</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\mi&gt; javac -version</span><br><span class="line">javac 1.8.0_201</span><br></pre></td></tr></table></figure>
+<h4 id="5-IDE"><a href="#5-IDE" class="headerlink" title="5.IDE"></a>5.IDE</h4><p>Eclipse IDE</p>
 <p><a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a></p>
 <p>InterlliJ IDEA</p>
 <p><a href="https://www.jetbrains.com/idea/download/other.html" target="_blank" rel="noopener">https://www.jetbrains.com/idea/download/other.html</a></p>
 <p>推荐：IDEA3.2版本</p>
 <p>破解补丁jar：</p>
 <p><a href="https://develop.lanzous.com/ic249zc" target="_blank" rel="noopener">https://develop.lanzous.com/ic249zc</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;shimo.im&#x2F;docs&#x2F;drQPYKjDCC3crHvD&#x2F;</span><br></pre></td></tr></table></figure>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><h4 id="1-卸载OpenJDK"><a href="#1-卸载OpenJDK" class="headerlink" title="1. 卸载OpenJDK"></a>1. 卸载OpenJDK</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep java 查找</span><br><span class="line"> </span><br><span class="line">yum -y remove 查找出的名字</span><br></pre></td></tr></table></figure>
+<h4 id="2-创建目录解压"><a href="#2-创建目录解压" class="headerlink" title="2. 创建目录解压"></a>2. 创建目录解压</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br><span class="line">mkdir java</span><br><span class="line">cd java</span><br></pre></td></tr></table></figure>
+<h4 id="3-将下载的JDK解压到-usr-local-java"><a href="#3-将下载的JDK解压到-usr-local-java" class="headerlink" title="3. 将下载的JDK解压到/usr/local/java"></a>3. 将下载的JDK解压到/usr/local/java</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf 安装包 -C ./</span><br><span class="line"></span><br><span class="line">解压后，/usr/local/java 目录会有类似 jdk1.8.0_161 的目录</span><br></pre></td></tr></table></figure>
 
+<h4 id="4-编辑-etc-profile-文件-在文件尾部加入JDK配置环境"><a href="#4-编辑-etc-profile-文件-在文件尾部加入JDK配置环境" class="headerlink" title="4. 编辑 /etc/profile 文件 在文件尾部加入JDK配置环境"></a>4. 编辑 /etc/profile 文件 在文件尾部加入JDK配置环境</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/local/java/jdk1.8.0_161</span><br><span class="line">CLASSPATH=$JAVA_HOME/lib/ </span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin </span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br></pre></td></tr></table></figure>
+<h4 id="5-执行命令使环境变量生效"><a href="#5-执行命令使环境变量生效" class="headerlink" title="5. 执行命令使环境变量生效"></a>5. 执行命令使环境变量生效</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h4 id="6-验证"><a href="#6-验证" class="headerlink" title="6. 验证"></a>6. 验证</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line"></span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>
 
       
 
@@ -244,7 +248,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-java windows环境变量</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-JDK 环境变量</a>
         		</li>
       		
 		</ul>
@@ -451,7 +455,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-java windows环境变量</a>
+                <a href="javascript:void(0)" class="js-tag color5">-JDK 环境变量</a>
               </li>
              
               <li class="article-tag-list-item">
