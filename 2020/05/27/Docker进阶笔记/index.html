@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/27/tEfJVs.md.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/28/tVw9Df.md.png">
 <meta property="article:published_time" content="2020-05-28T06:16:51.000Z">
-<meta property="article:modified_time" content="2020-05-28T06:22:41.405Z">
+<meta property="article:modified_time" content="2020-05-28T08:37:06.356Z">
 <meta property="article:author" content="Abc-5">
 <meta property="article:tag" content="-docker">
 <meta name="twitter:card" content="summary">
@@ -287,8 +287,9 @@
 <h4 id="发布镜像"><a href="#发布镜像" class="headerlink" title="发布镜像"></a>发布镜像</h4></li>
 </ol>
 <blockquote>
-<p>DockerHub<br><strong>登录</strong> </p>
+<p>DockerHub</p>
 </blockquote>
+<p><strong>登录</strong> </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@izbp1ii079z8t7vvuacg9uz tomcatlogs]# docker login -u emtanling</span><br><span class="line">Password: </span><br><span class="line">WARNING! Your password will be stored unencrypted in /root/.docker/config.json.</span><br><span class="line">Configure a credential helper to remove this warning. See</span><br><span class="line">https://docs.docker.com/engine/reference/commandline/login/#credentials-store</span><br><span class="line"></span><br><span class="line">Login Succeeded</span><br></pre></td></tr></table></figure>
 <p><strong>上传</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@izbp1ii079z8t7vvuacg9uz tomcatlogs]# docker push tomcattest01</span><br><span class="line">The push refers to repository [docker.io/library/tomcattest01]</span><br><span class="line">cac31feeb3ff: Preparing </span><br><span class="line">0c379727468d: Preparing </span><br><span class="line">ca30692e41ad: Preparing </span><br><span class="line">c736aeb1b3d8: Preparing </span><br><span class="line">0683de282177: Preparing </span><br><span class="line">denied: requested access to the resource is denied  // 错误</span><br><span class="line"></span><br><span class="line">// 问题</span><br><span class="line">[root@izbp1ii079z8t7vvuacg9uz tomcatlogs]# docker push emt/tomcattest01:1.0</span><br><span class="line">The push refers to repository [docker.io/emt/tomcattest01]</span><br><span class="line">An image does not exist locally with the tag: emt/tomcattest01</span><br><span class="line">// 解决，增加一个 tag</span><br><span class="line">[root@izbp1ii079z8t7vvuacg9uz tomcatlogs]# docker tag d1a69f8e9ea3 emt/diytomcat:1.0</span><br><span class="line">emt/diytomcat         1.0                 d1a69f8e9ea3        40 minutes ago      718MB</span><br><span class="line">tomcattest01          latest              d1a69f8e9ea3        40 minutes ago      718MB</span><br><span class="line">// 重新创建一个并带上版本号</span><br></pre></td></tr></table></figure>
