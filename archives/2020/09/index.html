@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Emtanling.github.io">
-  <title>BMP图片 | Hexo</title>
+  <title>Archives: 2020/9 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C语言生成bmp图片">
-<meta property="og:type" content="article">
-<meta property="og:title" content="BMP图片">
-<meta property="og:url" content="https://emtanling.github.io/2020/07/27/bmp/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://emtanling.github.io/archives/2020/09/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="C语言生成bmp图片">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-28T05:17:13.102Z">
-<meta property="article:modified_time" content="2020-07-28T05:17:13.102Z">
 <meta property="article:author" content="Emtanling">
-<meta property="article:tag" content="-windows bmp">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -149,87 +144,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-bmp" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      BMP图片
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/09/08/bmp/" class="archive-article-date">
+  	<time datetime="2020-09-08T08:46:13.130Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/09/08/bmp/">BMP图片</a>
     </h1>
   
 
-        
-        <a href="/2020/07/27/bmp/" class="archive-article-date">
-  	<time datetime="2020-07-28T05:17:13.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="C语言生成bmp图片"><a href="#C语言生成bmp图片" class="headerlink" title="C语言生成bmp图片"></a>C语言生成bmp图片</h2><a id="more"></a>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span>  U1;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> short U2;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>  U4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span>  BOOL;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE  (0xFFu)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE (0x00u)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_SerializeLittleEndianU2</span><span class="params">(U1* u1_ap_serial, U2 u2_a_value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (u1_ap_serial == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		u1_ap_serial[<span class="number">0</span>] = (U1)u2_a_value;</span><br><span class="line">		u1_ap_serial[<span class="number">1</span>] = (U1)(u2_a_value &gt;&gt; <span class="number">8</span>);</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_SerializeLittleEndianU3</span><span class="params">(U1* u1_ap_serial, U4 u4_a_value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (u1_ap_serial == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		u1_ap_serial[<span class="number">0</span>] = (U1)u4_a_value;</span><br><span class="line">		u1_ap_serial[<span class="number">1</span>] = (U1)(u4_a_value &gt;&gt; <span class="number">8</span>);</span><br><span class="line">		u1_ap_serial[<span class="number">2</span>] = (U1)(u4_a_value &gt;&gt; <span class="number">16</span>);</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_SerializeLittleEndianU4</span><span class="params">(U1* u1_ap_serial, U4 u4_a_value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (u1_ap_serial == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		u1_ap_serial[<span class="number">0</span>] = (U1)u4_a_value;</span><br><span class="line">		u1_ap_serial[<span class="number">1</span>] = (U1)(u4_a_value &gt;&gt; <span class="number">8</span>);</span><br><span class="line">		u1_ap_serial[<span class="number">2</span>] = (U1)(u4_a_value &gt;&gt; <span class="number">16</span>);</span><br><span class="line">		u1_ap_serial[<span class="number">3</span>] = (U1)(u4_a_value &gt;&gt; <span class="number">24</span>);</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BMP_RGBA32(r,g,b,a)  (U4)( ((U4)(U1)(r)&lt;&lt;16) | ((U4)(U1)(g)&lt;&lt;8) | (U4)(U1)(b) | ((U4)(U1)(a)&lt;&lt;24) )</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BMP_RGB24(r,g,b)     (U4)( ((U4)(U1)(r)&lt;&lt;16) | ((U4)(U1)(g)&lt;&lt;8) | (U4)(U1)(b) )</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BMP_RGBA32TOBMP16(c) (U2)( (((U4)(c)&gt;&gt;9) &amp; 0x7C00u) | (((U4)(c)&gt;&gt;6) &amp; 0x03E0u) | (((U4)(c)&gt;&gt;3) &amp; 0x001F) )</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	U4 u4_image_width;</span><br><span class="line">	U4 u4_image_height;</span><br><span class="line">	U4 u4_widthbyte;</span><br><span class="line">	U4 u4_image_size;</span><br><span class="line">	U2 u2_bitcount;</span><br><span class="line">	U2 u2_palette_size;</span><br><span class="line">	U1* u1_p_image_data;</span><br><span class="line">&#125; ST_BITMAP;</span><br><span class="line"></span><br><span class="line"><span class="function">ST_BITMAP* <span class="title">st_g_CreateBitmap</span><span class="params">(U4 u4_a_width, U4 u4_a_height, U2 u2_a_bitcount)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BOOL b_t_success = FALSE;</span><br><span class="line">	ST_BITMAP* st_tp_bitmap = <span class="literal">NULL</span>;</span><br><span class="line">	U4 u4_t_widthbyte = <span class="number">0</span>;</span><br><span class="line">	U4 u4_t_imagesize = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> ((u4_a_width == <span class="number">0</span>) || (u4_a_width &gt; <span class="number">4096</span>))</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> ((u4_a_height == <span class="number">0</span>) || (u4_a_height &gt; <span class="number">4096</span>))</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> ((u2_a_bitcount != <span class="number">16</span>) &amp;&amp; (u2_a_bitcount != <span class="number">24</span>) &amp;&amp; (u2_a_bitcount != <span class="number">32</span>))</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 4-byte aligned bytes for a line of image data</span></span><br><span class="line">		u4_t_widthbyte = (u4_a_width * u2_a_bitcount + <span class="number">31</span>) / <span class="number">32</span> * <span class="number">4</span>;</span><br><span class="line">		u4_t_imagesize = (u4_t_widthbyte * u4_a_height);</span><br><span class="line"></span><br><span class="line">		st_tp_bitmap = (ST_BITMAP *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ST_BITMAP) + u4_t_imagesize); <span class="comment">// alloc together</span></span><br><span class="line">		<span class="keyword">if</span> (st_tp_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">memset</span>(st_tp_bitmap, <span class="number">0</span>, <span class="keyword">sizeof</span>(ST_BITMAP) + u4_t_imagesize);</span><br><span class="line"></span><br><span class="line">		st_tp_bitmap-&gt;u4_image_width = u4_a_width;</span><br><span class="line">		st_tp_bitmap-&gt;u4_image_height = u4_a_height;</span><br><span class="line">		st_tp_bitmap-&gt;u4_widthbyte = u4_t_widthbyte;</span><br><span class="line">		st_tp_bitmap-&gt;u4_image_size = u4_t_imagesize;</span><br><span class="line">		st_tp_bitmap-&gt;u2_bitcount = u2_a_bitcount;</span><br><span class="line">		st_tp_bitmap-&gt;u2_palette_size = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// pointer to the address next to the struct</span></span><br><span class="line">		st_tp_bitmap-&gt;u1_p_image_data = (U1*)st_tp_bitmap + <span class="keyword">sizeof</span>(ST_BITMAP);</span><br><span class="line"></span><br><span class="line">		b_t_success = TRUE;</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> st_tp_bitmap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_g_FreeBitmap</span><span class="params">(ST_BITMAP* st_ap_bitmap)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BOOL b_t_success = FALSE;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (st_ap_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">memset</span>(st_ap_bitmap, <span class="number">0</span>, <span class="keyword">sizeof</span>(ST_BITMAP));</span><br><span class="line">		<span class="built_in">free</span>(st_ap_bitmap);</span><br><span class="line"></span><br><span class="line">		b_t_success = TRUE;</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_g_SaveBitmap</span><span class="params">(<span class="keyword">const</span> ST_BITMAP* st_ap_bitmap, <span class="keyword">const</span> <span class="keyword">char</span>* sz_ap_path)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BOOL b_t_success = FALSE;</span><br><span class="line"></span><br><span class="line">	U1 u1_tp_bitmap_header[] =</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="number">0x42</span>, <span class="number">0x4D</span>, <span class="number">0xAA</span>, <span class="number">0xAA</span>, <span class="number">0xAA</span>, <span class="number">0xAA</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="comment">//  2 AA-&gt;FileSize</span></span><br><span class="line">		<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0xBB</span>, <span class="number">0xBB</span>, <span class="number">0xBB</span>, <span class="number">0xBB</span>, <span class="number">0x28</span>, <span class="number">0x00</span>, <span class="comment">// 10 BB-&gt;OffBits</span></span><br><span class="line">		<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0xCC</span>, <span class="number">0xCC</span>, <span class="number">0xCC</span>, <span class="number">0xCC</span>, <span class="number">0xDD</span>, <span class="number">0xDD</span>, <span class="comment">// 18 CC-&gt;Width</span></span><br><span class="line">		<span class="number">0xDD</span>, <span class="number">0xDD</span>, <span class="number">0x01</span>, <span class="number">0x00</span>, <span class="number">0xEE</span>, <span class="number">0xEE</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="comment">// 22 DD-&gt;Height</span></span><br><span class="line">		<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0xFF</span>, <span class="number">0xFF</span>, <span class="number">0xFF</span>, <span class="number">0xFF</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="comment">// 28 EE-&gt;BitCount</span></span><br><span class="line">		<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="comment">// 34 FF-&gt;ImageSize</span></span><br><span class="line">		<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span></span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	FILE* file_bitmap = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	U4 u4_t_y;</span><br><span class="line">	U4 u4_t_pixel_offset = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (st_ap_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> ((st_ap_bitmap-&gt;u2_bitcount != <span class="number">16</span>) &amp;&amp; (st_ap_bitmap-&gt;u2_bitcount != <span class="number">24</span>) &amp;&amp; (st_ap_bitmap-&gt;u2_bitcount != <span class="number">32</span>))</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (sz_ap_path == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		file_bitmap = fopen(sz_ap_path, <span class="string">"wb"</span>);</span><br><span class="line">		<span class="keyword">if</span> (file_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// set bitmap head info</span></span><br><span class="line">		vd_SerializeLittleEndianU4(&amp;u1_tp_bitmap_header[<span class="number">2</span>], <span class="keyword">sizeof</span>(u1_tp_bitmap_header) + st_ap_bitmap-&gt;u4_image_size);</span><br><span class="line">		vd_SerializeLittleEndianU4(&amp;u1_tp_bitmap_header[<span class="number">10</span>], <span class="keyword">sizeof</span>(u1_tp_bitmap_header));</span><br><span class="line">		vd_SerializeLittleEndianU4(&amp;u1_tp_bitmap_header[<span class="number">18</span>], st_ap_bitmap-&gt;u4_image_width);</span><br><span class="line">		vd_SerializeLittleEndianU4(&amp;u1_tp_bitmap_header[<span class="number">22</span>], st_ap_bitmap-&gt;u4_image_height);</span><br><span class="line">		vd_SerializeLittleEndianU2(&amp;u1_tp_bitmap_header[<span class="number">28</span>], st_ap_bitmap-&gt;u2_bitcount);</span><br><span class="line">		vd_SerializeLittleEndianU4(&amp;u1_tp_bitmap_header[<span class="number">34</span>], st_ap_bitmap-&gt;u4_image_size);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// write bitmap file head</span></span><br><span class="line">		fwrite(u1_tp_bitmap_header, <span class="keyword">sizeof</span>(u1_tp_bitmap_header), <span class="number">1L</span>, file_bitmap);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// write bitmap image data, bottom to top</span></span><br><span class="line">		u4_t_pixel_offset = st_ap_bitmap-&gt;u4_image_height * st_ap_bitmap-&gt;u4_widthbyte;</span><br><span class="line">		<span class="keyword">for</span> (u4_t_y = <span class="number">0</span>; u4_t_y &lt; st_ap_bitmap-&gt;u4_image_height; u4_t_y++)</span><br><span class="line">		&#123;</span><br><span class="line">			u4_t_pixel_offset -= st_ap_bitmap-&gt;u4_widthbyte;</span><br><span class="line">			fwrite(&amp;st_ap_bitmap-&gt;u1_p_image_data[u4_t_pixel_offset], st_ap_bitmap-&gt;u4_widthbyte, <span class="number">1L</span>, file_bitmap);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		b_t_success = TRUE;</span><br><span class="line"></span><br><span class="line">	&#125; <span class="keyword">while</span> (<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (file_bitmap)</span><br><span class="line">		fclose(file_bitmap);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vd_SetBitmapPixel</span><span class="params">(ST_BITMAP* st_ap_bitmap, U4 u4_a_x, U4 u4_a_y, U4 u4_a_color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	U4 u4_t_pixel_offset = <span class="number">0</span>;</span><br><span class="line">	U2 u2_t_color = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (st_ap_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (u4_a_x &gt;= st_ap_bitmap-&gt;u4_image_width)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (u4_a_y &gt;= st_ap_bitmap-&gt;u4_image_height)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		u4_t_pixel_offset = u4_a_y * st_ap_bitmap-&gt;u4_widthbyte + u4_a_x * st_ap_bitmap-&gt;u2_bitcount / <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">switch</span> (st_ap_bitmap-&gt;u2_bitcount)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">16</span>:</span><br><span class="line">			u2_t_color = BMP_RGBA32TOBMP16(u4_a_color);</span><br><span class="line">			vd_SerializeLittleEndianU2(&amp;st_ap_bitmap-&gt;u1_p_image_data[u4_t_pixel_offset], u2_t_color);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">24</span>:</span><br><span class="line">			vd_SerializeLittleEndianU3(&amp;st_ap_bitmap-&gt;u1_p_image_data[u4_t_pixel_offset], u4_a_color);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">32</span>:</span><br><span class="line">			vd_SerializeLittleEndianU4(&amp;st_ap_bitmap-&gt;u1_p_image_data[u4_t_pixel_offset], u4_a_color);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ST_BITMAP* st_tp_bitmap = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// create bitmap, size:20x10 format:RGB555-&gt;16</span></span><br><span class="line">		<span class="comment">// also support format RGB888-&gt;24 and RGBA8888-&gt;32</span></span><br><span class="line">		st_tp_bitmap = st_g_CreateBitmap(<span class="number">1100</span>, <span class="number">1100</span>,<span class="number">24</span>);</span><br><span class="line">		<span class="keyword">if</span> (st_tp_bitmap == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// draw pixels on bitmap</span></span><br><span class="line">	</span><br><span class="line">		vd_SetBitmapPixel(st_tp_bitmap, <span class="number">50</span>, <span class="number">50</span>, BMP_RGB24(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)); <span class="comment">// black</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="comment">// save to file</span></span><br><span class="line">		vd_g_SaveBitmap(st_tp_bitmap, <span class="string">"test.bmp"</span>);</span><br><span class="line"></span><br><span class="line">	&#125; <span class="keyword">while</span> (FALSE);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (st_tp_bitmap)</span><br><span class="line">		vd_g_FreeBitmap(st_tp_bitmap);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a><a href="https://gitee.com/emtanling/image/raw/master/BMP.zip" target="_blank" rel="noopener">Download</a></h3>
-      
-
-
-  <div class="declare">
-    <strong>本文作者：</strong>
-    
-      Emtanling
-    
-    <br>
-    <strong>本文链接：</strong>
-    https://emtanling.github.io/2020/07/27/bmp/
-    <br>
-    <strong>版权声明：</strong>
-    本作品采用
-    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-    进行许可。转载请注明出处！
-    
-      <br>
-      <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
-    
-  </div>
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/Alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/Wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -241,106 +185,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://emtanling.github.io/2020/07/27/bmp/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2020/05/27/Docker%E8%BF%9B%E9%98%B6%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Docker进阶笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -363,8 +220,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
